@@ -25,7 +25,7 @@ class Shop:
         return cost
 
     def shopping(self, customer: Customer) -> Decimal:
-        formatted_date = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+        formatted_date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         total_cost = Decimal("0.0")
         print(f"Date: {formatted_date}")
         print(f"Thanks, {customer.name}, for your purchase!")

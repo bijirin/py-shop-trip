@@ -76,4 +76,7 @@ class Customer:
         print(f"\n{self.name} rides home")
         self.money -= self.travel(self.home, fuel_price)
 
-        print(f"{self.name} now has {round(self.money, 2).normalize()} dollars\n")
+        print(
+            f"{self.name} now has "
+            f"{round(self.money, 2).normalize()} dollars\n"
+        )

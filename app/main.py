@@ -6,7 +6,7 @@ from app.customer import Customer
 from app.shop import Shop
 
 
-def shop_trip():
+def shop_trip() -> None:
     customers = {}
     shops = {}
     

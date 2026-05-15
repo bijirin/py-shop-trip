@@ -29,7 +29,7 @@ class Shop:
         total_cost = Decimal("0.0")
         print(f"Date: {formatted_date}")
         print(f"Thanks, {customer.name}, for your purchase!")
-        print(f"You have bought:")
+        print("You have bought:")
 
         for product in customer.product_cart:
             product_qty = Decimal(

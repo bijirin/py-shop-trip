@@ -4,13 +4,14 @@ from app.car import Car
 
 
 class Customer:
-    def __init__(self,
-        name: str,
-        product_cart: dict,
-        location: tuple,
-        money: Decimal,
-        car: Car,
-    ) -> None:
+    def __init__(
+            self,
+            name: str,
+            product_cart: dict,
+            location: tuple,
+            money: Decimal,
+            car: Car,
+        ) -> None:
         self.name = name
         self.product_cart = product_cart
         self.location = location
@@ -38,7 +39,7 @@ class Customer:
         self.location = dest
         return travel_cost
 
-    def shopping(self, shops: dict, fuel_price) -> None:
+    def shopping(self, shops: dict, fuel_price: Decimal) -> None:
         print(f"{self.name} has {self.money} dollars")
 
         shop_costs = {}
@@ -63,7 +64,7 @@ class Customer:
             )
             return
 
-        lowest_cost_shop = min(shop_costs, key = shop_costs.get)
+        lowest_cost_shop = min(shop_costs, key=shop_costs.get)
 
         target_shop = shops[lowest_cost_shop]
 

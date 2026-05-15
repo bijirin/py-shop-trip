@@ -42,10 +42,10 @@ class Shop:
                     self.products.get(product, 0.0)
                 )
             )
-            cost = product_qty * product_unit_price
+            cost = Decimal(str(product_qty * product_unit_price))
             print(
-                f"{product_qty} {product}s for "
-                f"{cost:g} dollars"
+                f"{product_qty.normalize()} {product}s for "
+                f"{round(cost, 2).normalize()} dollars"
             )
             total_cost += cost
 

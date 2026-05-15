@@ -40,7 +40,7 @@ class Customer:
         return travel_cost
 
     def shopping(self, shops: dict, fuel_price: Decimal) -> None:
-        print(f"{self.name} has {self.money} dollars")
+        print(f"{self.name} has {round(self.money, 2).normalize()} dollars")
 
         shop_costs = {}
 
@@ -51,7 +51,7 @@ class Customer:
             )
             print(
                 f"{self.name}'s trip to the {shop.name} "
-                f"costs {round(estimated_cost, 2)}"
+                f"costs {round(estimated_cost, 2).normalize()}"
             )
             shop_costs[shop.name] = estimated_cost
 
@@ -76,4 +76,4 @@ class Customer:
         print(f"\n{self.name} rides home")
         self.money -= self.travel(self.home, fuel_price)
 
-        print(f"{self.name} now has {round(self.money, 2)} dollars\n")
+        print(f"{self.name} now has {round(self.money, 2).normalize()} dollars\n")

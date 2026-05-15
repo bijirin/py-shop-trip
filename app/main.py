@@ -9,7 +9,7 @@ from app.shop import Shop
 def shop_trip() -> None:
     customers = {}
     shops = {}
-    
+
     with open("app/config.json", "r") as file:
         config_data = json.load(file)
 

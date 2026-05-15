@@ -10,8 +10,8 @@ class Customer:
             product_cart: dict,
             location: tuple,
             money: Decimal,
-            car: Car,
-        ) -> None:
+            car: Car
+    ) -> None:
         self.name = name
         self.product_cart = product_cart
         self.location = location
@@ -50,7 +50,7 @@ class Customer:
                 + shop.calculate_shopping(self.product_cart)
             )
             print(
-                f"{self.name}\'s trip to the {shop.name} "
+                f"{self.name}'s trip to the {shop.name} "
                 f"costs {round(estimated_cost, 2)}"
             )
             shop_costs[shop.name] = estimated_cost
